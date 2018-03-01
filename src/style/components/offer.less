@@ -1,0 +1,45 @@
+.offer {
+  position: relative;
+  margin-top: -15px;
+  padding: 40px 70px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 300;
+
+  @media @tablet {
+    padding: 50px 40px 100px 40px;
+  }
+
+  @media @desktop {
+    padding: 80px 210px 180px 210px;
+  }
+
+  &-title {
+    display: block;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+
+    @media @tablet {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  &-title:first-child {
+    margin-bottom: 36px;
+
+    @media @tablet {
+      margin: 0;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 0px;
+    content: '';
+    bottom: 0;
+    border-right: 100vw solid #f2f2f2;
+    border-top: 8vw solid transparent;
+    z-index: -1;
+  }
+}

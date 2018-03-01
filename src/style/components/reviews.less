@@ -1,0 +1,92 @@
+.reviews {
+  position: relative;
+  font-family: Open Sans, sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 45px;
+  padding-bottom: 70px;
+
+  @media @desktop {
+    padding: 0 130px;
+  }
+
+  @media @desktop-full {
+    padding: 0 17%;
+  }
+
+
+
+  &__item {
+    position: relative;
+    padding: 0 20px;
+    padding-bottom: 40px;
+
+    @media @tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media @desktop {
+      padding: 125px 140px 135px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 80px;
+        height: 70px;
+        background: url("../../src/img/quotes.svg") no-repeat 50% 50%;
+        top: 0;
+        left: 45%;
+      }
+
+    }
+
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+
+    @media @tablet {
+      margin-bottom: 15px;
+      order: 2;
+    }
+  }
+
+  &__item-text {
+    display: block;
+
+    @media @tablet {
+      order: 1;
+      margin-bottom: 40px;
+    }
+
+    @media @desktop {
+
+    }
+  }
+
+  &__item-description {
+    display: none;
+
+    @media @tablet {
+      display: block;
+      margin: 0;
+      order: 3;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 0px;
+    content: '';
+    bottom: 0;
+    border-right: 100vw solid #f2f2f2;
+    border-top: 8vw solid transparent;
+    z-index: -1;
+  }
+
+}

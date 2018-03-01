@@ -1,0 +1,105 @@
+.contacts {
+  padding-top: 45px;
+  font-family: Open Sans, sans-serif;
+
+  &__header {
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 24px;
+
+    @media @tablet {
+      font-size: 40px;
+
+    }
+  }
+
+  &__items {
+
+    @media @tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__item {
+    margin-bottom: 35px;
+
+    @media @tablet {
+      min-width: 275px;
+      margin: 0 35px 25px;
+    }
+
+    @media @desktop {
+      &--email {
+        order: 1;
+      }
+    }
+  }
+
+  &__item-title {
+
+    @media @tablet {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__item-text {
+    margin: 0;
+    color: #d22856;
+    text-decoration: none;
+
+    &:hover {
+      color: #283645;
+      box-shadow: 0 2px 0 0 #283645;
+      transition: all 0.5s ease;
+    }
+
+    &:active {
+      color: #ced0d2;
+      box-shadow: none;
+    }
+
+    @media @tablet {
+      font-size: 24px;
+
+    }
+  }
+
+  &__map {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background-color: grey;
+
+    @media @tablet {
+      height: 380px;
+    }
+
+    @media @desktop {
+
+    }
+  }
+
+  &__map::before {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    border-left: 50vw solid transparent;
+    border-top: 35px solid #fff;
+    border-right: 50vw solid transparent;
+
+    @media @tablet {
+      border-top: 75px solid #fff;
+    }
+
+    @media @tablet {
+      border-top: 120px solid #fff;
+    }
+  }
+}

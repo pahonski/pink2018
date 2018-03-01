@@ -1,0 +1,133 @@
+.features {
+  position: relative;
+  background-color: #f2f2f2;
+  font-family: Open Sans, sans-serif;
+  padding-bottom: 280px;
+
+
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 278px;
+    width: 160px;
+    bottom: 0;
+    left: 25%;
+    background-image: url("../../src/img/screen-1-3.png");
+    background-repeat: no-repeat;
+
+  }
+
+
+  @media @tablet {
+    padding: 15px 5% 40px 50%;
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 275px;
+      height: 480px;
+      left: 5%;
+      bottom: 0;
+      background: url("../../src/img/iphone-screen-2-3@1x.png") no-repeat;
+      background-size: 275px auto;
+    }
+  }
+
+  @media @desktop {
+    padding: 0;
+    &:after {
+      display: none;
+    }
+  }
+
+  &__items {
+    padding: 0 20px;
+    text-align: center;
+
+    @media @tablet {
+
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    @media @desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 10.8%;
+    }
+
+    @media @desktop-full {
+      padding: 0 17%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 40px;
+
+    @media @tablet {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media @desktop {
+      text-align: center;
+      max-width: 300px;
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+      padding-top: 360px;
+      margin-top: -100px;
+      
+      &--1 {
+        background-image: url("../../src/img/iphone-screen-3-1@1x.png");
+      }
+
+      &--2 {
+        background-image: url("../../src/img/iphone-screen-3-2@1x.png");
+      }
+
+      &--3 {
+        background-image: url("../../src/img/iphone-screen-3-3@1x.png");
+      }
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+
+    @media @tablet {
+      font-size: 18px;
+      line-height: 10px;
+    }
+
+    @media @desktop {
+      font-size: 30px;
+      line-height: 30px;
+      padding:  0 30px;
+    }
+  }
+
+  &__item-descr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+
+    @media @desktop {
+      padding: 0 30px;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: normal;
+    }
+  }
+
+
+}

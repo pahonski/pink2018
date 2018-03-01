@@ -1,0 +1,182 @@
+
+
+
+.page-header {
+  position: relative;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  @media @desktop {
+    padding: 0 10%;
+  }
+
+  @media @desktop-full {
+    padding: 0 17%;
+  }
+
+}
+
+.main-nav {
+  position: absolute;
+  background: rgba(0,0,0,0.3);
+
+  @media @desktop {
+
+  }
+
+
+
+
+  &__menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    @media @tablet {
+      padding: 20px 40px;
+      height: 110px;
+    }
+
+    @media @desktop {
+      padding: 20px 10%;
+    }
+
+    @media @desktop-full {
+      padding: 20px 17%;
+    }
+  }
+
+  &__menu-list {
+    position: relative;
+    top: 1px;
+    .q-mobile-menu();
+
+
+    @media @desktop {
+      min-width: 65%;
+      max-width: 80%;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+
+      & a {
+      color: #d3d4d5;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 18px;
+
+        &:hover {
+          box-shadow: 0 2px 0 0 #ffffff;
+          transition: all 0.5s ease;
+        }
+
+        &:active {
+          box-shadow: none;
+          transition: none;
+          opacity: .3;
+        }
+      }
+    }
+  }
+
+  &__menu-list--closed {
+    display: none;
+
+    @media @desktop {
+      display: flex;
+    }
+  }
+
+
+  &--overlap {
+    width: 100%;
+    min-height: 65px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+
+  &__logo-link {
+    display: block;
+    height: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-family: GothamRounded, sans-serif;
+    font-size: 25px;
+    width: 75px;
+
+    @media @tablet {
+      width: 150px;
+      height: 65px;
+      background-image: url("../../src/img/Pink-logo-2@1x.png");
+      background-repeat: no-repeat;
+      background-position: 80% 10%;
+      font-size: 0;
+    }
+
+    @media @desktop {
+      background-image: url("../../src/img/Pink-logo-3@1x.png");
+      background-repeat: no-repeat;
+      background-position: 80% 10%;
+
+      &:active {
+        opacity: .3;
+      }
+      }
+
+
+  }
+
+  &__menu-button {
+    display: block;
+    width: 50px;
+    font-size: 0;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2225%22%20viewBox%3D%22-0.028%20-0.496%2050%2025%22%3E%3Cpath%20fill%3D%22%23231F20%22%20d%3D%22M1.137%200C.51%200%200%20.428%200%201.01v1.98C0%203.55.494%204%201.138%204h47.67c.63%200%201.14-.427%201.14-1.01V1.01c0-.558-.495-1.01-1.14-1.01H1.138zm0%2010.003C.51%2010.003%200%2010.43%200%2011.013v1.98c0%20.557.494%201.01%201.138%201.01h47.67c.63%200%201.14-.428%201.14-1.01v-1.98c0-.558-.495-1.01-1.14-1.01H1.138zm0%2010.002c-.627%200-1.137.43-1.137%201.01v1.982c0%20.557.494%201.01%201.138%201.01h47.67c.63%200%201.14-.428%201.14-1.01v-1.98c0-.56-.495-1.012-1.14-1.012H1.138z%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M1.137%200C.51%200%200%20.428%200%201.01v1.98C0%203.55.494%204%201.138%204h47.67c.63%200%201.14-.427%201.14-1.01V1.01c0-.558-.495-1.01-1.14-1.01H1.138zm0%2010.003C.51%2010.003%200%2010.43%200%2011.013v1.98c0%20.557.494%201.01%201.138%201.01h47.67c.63%200%201.14-.428%201.14-1.01v-1.98c0-.558-.495-1.01-1.14-1.01H1.138zm0%2010.002c-.627%200-1.137.43-1.137%201.01v1.982c0%20.557.494%201.01%201.138%201.01h47.67c.63%200%201.14-.428%201.14-1.01v-1.98c0-.56-.495-1.012-1.14-1.012H1.138z%22%2F%3E%3C%2Fsvg%3E)no-repeat;
+
+    &--close {
+      background-image: none;
+
+      &::after,
+      &::before {
+        top: 30px;
+        right: 30px;
+      }
+
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        transform: rotate(-45deg);
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        transform: rotate(45deg);
+      }
+    }
+
+    @media @desktop {
+      display: none;
+    }
+  }
+
+
+}

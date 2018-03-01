@@ -1,0 +1,23 @@
+{
+  "name": "pink2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pahonski/pink2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pahonski/pink2018/issues"
+  },
+  "homepage": "https://github.com/pahonski/pink2018#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^4.0.0"
+  }
+}

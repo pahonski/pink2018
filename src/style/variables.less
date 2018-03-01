@@ -1,0 +1,101 @@
+@mobile: e("screen and (min-width: 320px) and (max-width: 699px)");
+@tablet: e("screen and (min-width: 700px)");
+@desktop: e("screen and (min-width: 1200px)");
+@desktop-full: e("screen and (min-width: 1440px)");
+
+@retina-2x: e("(min-resolution: 1.5dppx)");
+
+
+
+//Mixins
+
+.retinify(@img) {
+  @name: e(`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{img})[1]`);
+  @ext : e(`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{img})[2]`);
+  background-image: url(@img);
+  @media @retina-2x {
+    background-image: e("url(@{name}@2x.@{ext})");
+  }
+}
+
+//Addons
+
+.q-mobile-menu() {
+  @media @mobile {
+    position: absolute;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: 65px;
+    left: 0;
+
+    & a {
+      display: block;
+      min-width: 320px;
+      margin-bottom: 1px;
+      padding: 20px 80px;
+      background-color: #283645;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+      box-shadow: 0 1px 0 0 #475360;
+    }
+
+    & li:last-child a {
+      box-shadow: none;
+      margin-bottom: 0;
+    }
+
+    & li:first-child a {
+      border-top: 1px solid black;
+      box-shadow: inset 0 1px 0 0 #475360,
+      0 1px 0 0 #475360;
+    }
+  }
+}
+
+.q-tablet-menu() {
+  @media @tablet {
+    position: absolute;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: 65px;
+    left: 0;
+
+    & a {
+      display: block;
+      min-width: 320px;
+      margin-bottom: 1px;
+      padding: 20px 80px;
+      background-color: #283645;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+      box-shadow: 0 1px 0 0 #475360;
+    }
+
+    & li:last-child a {
+      box-shadow: none;
+      margin-bottom: 0;
+    }
+
+    & li:first-child a {
+      border-top: 1px solid black;
+      box-shadow: inset 0 1px 0 0 #475360,
+      0 1px 0 0 #475360;
+    }
+  }
+}

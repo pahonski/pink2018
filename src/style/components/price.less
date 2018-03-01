@@ -1,0 +1,155 @@
+.price {
+  font-family: Open Sans, sans-serif;
+  background-color: #f2f2f2;
+  padding-top: 95px;
+  padding-bottom: 50px;
+
+  @media @tablet {
+    & .slider__toggle {
+      display: none;
+    }
+  }
+
+  &__option {
+    display: none;
+
+    @media @tablet {
+        ul > li {
+        background: none;
+      }
+    }
+  }
+
+  &__price-table {
+
+    @media @tablet {
+      padding: 0 40px;
+    }
+
+    @media @desktop {
+      padding: 0 11%;
+    }
+
+    @media @desktop-full {
+      padding: 0 17%;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @media @tablet {
+      display: inline-block;
+      width: 25%;
+      margin-left: -5px;
+    }
+
+  }
+
+  &__item--hit::before {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: -32px;
+    content: "Хит";
+    text-transform: uppercase;
+    width: 100px;
+    height: 30px;
+    background-color: #d22856;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    transform: rotate(-45deg);
+
+  }
+
+  &__header {
+    background-color: #283645;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    border-left: 2px solid #e5e5e5;
+    border-right: 2px solid #e5e5e5;
+
+    @media @tablet {
+      padding-top: 20px;
+      padding-bottom: 15px;
+    }
+
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+  }
+
+  &__cost {
+    margin: 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+
+    @media @tablet {
+      font-size: 18px;
+      font-weight: lighter;
+    }
+  }
+
+  &__content-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 43px;
+
+  }
+
+  &__content-item {
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    text-align: left;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+    background: url("../../src/img/yes.svg") no-repeat 95% 50%;
+    line-height: 45px;
+
+    @media @tablet {
+      font-size: 0;
+      background: url("../../src/img/yes.svg") no-repeat 50% 50%;
+    }
+  }
+
+  &__content-item--option {
+    @media @tablet {
+      position: relative;
+      width: 100%;
+      padding-left: 20px;
+      text-align: left;
+      border-left: 2px solid #e5e5e5;
+      border-top: 2px solid #e5e5e5;
+      line-height: 45px;
+      font-size: 14px;
+
+      &:last-child {
+        border-bottom: 2px solid #e5e5e5;
+      }
+
+    }
+  }
+
+  &__content-item--not-included {
+    background: url("../../src/img/no.svg") no-repeat 95% 50%;
+
+    @media @tablet {
+      background: url("../../src/img/no.svg") no-repeat 50% 50%;
+    }
+  }
+
+}

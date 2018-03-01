@@ -1,0 +1,50 @@
+.research {
+  display: none;
+
+  @media @tablet {
+    font-family: Open Sans, sans-serif;
+    display: block;
+    min-height: 360px;
+    padding: 100px 50px 130px 50%;
+    background: url("../../src/img/research-tablet.svg") no-repeat 10% 50px;
+
+
+    &__text {
+      width: 100%;
+      text-align: left;
+
+    }
+
+    &__text-title {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__text-content {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__text-link {
+      color: #d22856;
+    }
+
+  }
+
+  @media @desktop {
+    padding: 100px 15% 130px 41%;
+    background-color: #f2f2f2;
+    margin-bottom: 70px;
+    background-position: 16% 20px;
+  }
+
+  @media @desktop-full {
+    background-position: 22% 20px;
+  }
+}
+

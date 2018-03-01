@@ -1,0 +1,144 @@
+.promo {
+  position: relative;
+  background: url("../../src/img/iphone-5-in-hand-png.png") 50% 175px no-repeat,
+  url("../../src/img/background-1@1x.jpg") no-repeat 50% 0;
+  background-size: contain, cover;
+
+  @media @tablet {
+    background: url("../../src/img/tablet-bg-iphone.png") 80% 100% no-repeat,
+    url("../../src/img/background-1@1x.jpg") no-repeat 50% 100%;
+    background-size: 700px, cover;
+    padding: 0 40px;
+  }
+
+  @media @desktop {
+    background: url("../../src/img/iphone-hand-3@1x.png") 75% 100% no-repeat,
+    url("../../src/img/background-fullsize.jpg") no-repeat 50% 50%;
+    background-size: 1080px, cover;
+    padding: 0 130px;
+  }
+
+  @media @desktop-full {
+    padding: 0 17%;
+  }
+}
+
+.promo-header {
+  font-family: Open Sans, sans-serif;
+  font-weight: 300;
+  height: 460px;
+
+
+  @media @tablet {
+    min-height: 730px;
+    padding-bottom: 110px;
+  }
+
+
+  @media @desktop {
+    min-height: 855px;
+    padding-bottom: 110px;
+  }
+
+
+  &__title {
+    padding-top: 90px;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+
+    @media @tablet {
+      padding: 0;
+      padding-top: 215px;
+      padding-right: 55%;
+      font-size: 40px;
+    }
+
+    @media @desktop {
+      font-size: 40px;
+      padding-right: 63%;
+    }
+
+    @media @desktop-full {
+      padding-right: 75%;
+    }
+
+  }
+
+}
+
+.promo__download {
+  min-height: 270px;
+  background-color: #1d2631;
+  padding-top: 28px;
+
+  @media @tablet {
+    position: absolute;
+    background-color: transparent;
+    top: 375px;
+    left: 0;
+    width: 50%;
+  }
+
+  &-button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    max-width: 280px;
+    max-height: 55px;
+    padding: 14px 35px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    border: 3px solid #fff;
+    border-radius: 25px;
+
+    &:hover {
+      background-color: #fff;
+      color: #d22856;
+    }
+
+    &:active {
+      color: rgba(242, 206, 213, 0.7);
+    }
+  }
+
+  &-icons {
+    display: flex;
+    justify-content: space-around;
+    max-width: 240px;
+    margin: 0 auto 15px;
+    font-size: 0;
+    flex-wrap: wrap;
+  }
+
+  &-icon {
+    display: block;
+    width: 50px;
+    height: 60px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &-icon--apple {
+    background: url("../../src/img/Apple.svg") 50% 50% no-repeat;
+  }
+
+  &-icon--android {
+    background: url("../../src/img/Android.svg") 50% 50% no-repeat;
+  }
+
+  &-icon--wp {
+    background: url("../../src/img/wp.svg") 50% 50% no-repeat;
+  }
+
+  &-description {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #fff;
+  }
+}
